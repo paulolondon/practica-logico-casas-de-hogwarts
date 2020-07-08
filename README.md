@@ -2,7 +2,10 @@
 
 ## Modalidad de trabajo :clipboard:
 
-Este proyecto cuenta con 2 archivos relevante (además del `README.md` que estás viendo), son `src/sombreroSeleccionador.pl` y `src/laCopaDeLasCasas.pl`: acá van las definiciones de predicados que se piden para resolver la consigna de cada parte principal.
+Este proyecto cuenta con los siguientes archivos para las definiciones de predicados:
+
+-  `src/sombreroSeleccionador.pl`: acá van los predicados de la primera parte.
+-  `src/laCopaDeLasCasas.pl`: acá van los predicados de la segunda parte.
 
 > Recomendación: cada vez que estés por empezar un punto, leelo completo. Luego avanzá de a poco, probando manualmente en la consola a medida que trabajás sobre la solución.
 
@@ -14,4 +17,8 @@ Para probar tu programa manualmente (desde la consola de SWI-Prolog) corré el c
 
 ## Enunciado :mag:
 
-Podés encontrar el enunciado para esta práctica [acá](https://docs.google.com/document/u/1/d/e/2PACX-1vR9SBhz2J3lmqcMXOBs1BzSt7N1YWPoIuubAmQxPIOcnbn5Ow9REYt4NXQzOwXXiUaEQ4hfHNEt3_C7/pub).
+ El enunciado para la práctica en formato pdf se encuentra dentro de este mismo repo: `Las casas de Hogwarts.pdf`.
+
+ > Si estás trabajando desde el VSCode, podés usar una extensión para visualizarlo desde el mismo editor. Durante la resolución de la práctica usamos vscode-pdf.
+
+En caso de que prefieras una versión más liviana para ver desde el navegador, podés encontrar el enunciado para esta práctica [acá](https://docs.google.com/document/u/1/d/e/2PACX-1vR9SBhz2J3lmqcMXOBs1BzSt7N1YWPoIuubAmQxPIOcnbn5Ow9REYt4NXQzOwXXiUaEQ4hfHNEt3_C7/pub).
