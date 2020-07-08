@@ -10,7 +10,7 @@ Este proyecto cuenta con 2 archivos relevante (además del `README.md` que está
 
 ## Pruebas manuales :white_check_mark:
 
-Para probar tu programa manualmente (desde la consola de SWI-Prolog) corré el comando: `swipl src/sombreroSeleccionador.pl` o `swipl src/laCopaDeLasCasas.pl`. 
+Para probar tu programa manualmente (desde la consola de SWI-Prolog) corré el comando: `swipl src/*.pl`. De esa forma se cargarán todos los archivos con extensión .pl que se encuentran dentro de la carpeta src y estarán disponibles para hacer consultas.
 
 ## Enunciado :mag:
 
