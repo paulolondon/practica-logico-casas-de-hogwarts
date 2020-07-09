@@ -32,3 +32,12 @@ lugarProhibido(tercerPiso, 75).
 esBuenAlumno(Mago):-
   hizoAlgunaAccion(Mago),
   not(hizoAlgoMalo(Mago)).
+
+%% 1b
+
+% hizo(Mago, Accion).
+
+esRecurrente(Accion):-
+  hizo(Mago, Accion),
+  hizo(OtroMago, Accion),
+  Mago \= OtroMago.
