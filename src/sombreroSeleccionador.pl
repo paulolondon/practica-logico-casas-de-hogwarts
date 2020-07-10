@@ -22,3 +22,7 @@ permiteEntrar(Casa, Mago):-
 permiteEntrar(slytherin, Mago):-
   sangre(Mago, TipoDeSangre),
   TipoDeSangre \= impura.
+
+%tieneCaracterApropiado(Mago, Casa):-
+  % todas las caracteristicas buscadas por la casa
+  % las tiene ese mago
