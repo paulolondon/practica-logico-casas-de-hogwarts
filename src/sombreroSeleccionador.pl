@@ -23,6 +23,30 @@ permiteEntrar(slytherin, Mago):-
   sangre(Mago, TipoDeSangre),
   TipoDeSangre \= impura.
 
-%tieneCaracterApropiado(Mago, Casa):-
+% tieneCaracteristica(Mago, Caracteristica)
+tieneCaracteristica(harry, coraje).
+tieneCaracteristica(harry, orgullo).
+tieneCaracteristica(harry, amistad).
+tieneCaracteristica(harry, inteligencia).
+
+tieneCaracteristica(draco, inteligencia).
+tieneCaracteristica(draco, orgullo).
+
+tieneCaracteristica(hermione, inteligencia).
+tieneCaracteristica(hermione, orgullo).
+tieneCaracteristica(hermione, responsabilidad).
+
+caracteristicaBuscada(gryffindor, coraje).
+caracteristicaBuscada(slytherin, orgullo).
+caracteristicaBuscada(slytherin, inteligencia).
+caracteristicaBuscada(ravenclaw, inteligencia).
+caracteristicaBuscada(ravenclaw, responsabilidad).
+caracteristicaBuscada(hufflepuff, amistad).
+
+tieneCaracterApropiado(Mago, Casa):-
   % todas las caracteristicas buscadas por la casa
   % las tiene ese mago
+  casa(Casa),
+  mago(Mago),
+  forall(caracteristicaBuscada(Casa, Caracteristica),
+         tieneCaracteristica(Mago, Caracteristica)).
