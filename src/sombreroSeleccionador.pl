@@ -50,3 +50,12 @@ tieneCaracterApropiado(Mago, Casa):-
   mago(Mago),
   forall(caracteristicaBuscada(Casa, Caracteristica),
          tieneCaracteristica(Mago, Caracteristica)).
+
+odiariaEntrar(harry, slytherin).
+odiariaEntrar(draco, hufflepuff).
+
+puedeQuedarSeleccionadoPara(Mago, Casa):-
+  tieneCaracterApropiado(Mago, Casa),
+  permiteEntrar(Casa, Mago),
+  not(odiariaEntrar(Mago, Casa)).
+puedeQuedarSeleccionadoPara(hermione, gryffindor).
