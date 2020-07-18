@@ -12,6 +12,8 @@ hizo(ron, buenaAccion(50, ganarAlAjedrezMagico)).
 hizo(hermione, buenaAccion(50, salvarASusAmigos)).
 hizo(harry, buenaAccion(60, ganarleAVoldemort)).
 hizo(cedric, buenaAccion(100, ganarAlQuidditch)).
+hizo(hermione, responderPregunta(dondeSeEncuentraUnBezoar, 20, snape)).
+hizo(hermione, responderPregunta(comoHacerLevitarUnaPluma, 25, flitwick)).
 
 hizoAlgunaAccion(Mago):-
   hizo(Mago, _).
@@ -25,6 +27,9 @@ puntajeQueGenera(irA(Lugar), PuntajeQueResta):-
   lugarProhibido(Lugar, Puntos),
   PuntajeQueResta is Puntos * -1.
 puntajeQueGenera(buenaAccion(Puntaje, _), Puntaje).
+puntajeQueGenera(responderPregunta(_, Dificultad, snape), Puntos):-
+  Puntos is Dificultad // 2.
+puntajeQueGenera(responderPregunta(_, Dificultad, Profesor), Dificultad):- Profesor \= snape.
 
 lugarProhibido(bosque, 50).
 lugarProhibido(seccionRestringida, 10).
