@@ -11,6 +11,7 @@ hizo(draco, irA(mazmorras)).
 hizo(ron, buenaAccion(50, ganarAlAjedrezMagico)).
 hizo(hermione, buenaAccion(50, salvarASusAmigos)).
 hizo(harry, buenaAccion(60, ganarleAVoldemort)).
+hizo(cedric, buenaAccion(100, ganarAlQuidditch)).
 
 hizoAlgunaAccion(Mago):-
   hizo(Mago, _).
@@ -32,7 +33,6 @@ lugarProhibido(tercerPiso, 75).
 esBuenAlumno(Mago):-
   hizoAlgunaAccion(Mago),
   not(hizoAlgoMalo(Mago)).
-
 %% 1b
 
 % hizo(Mago, Accion).
@@ -41,3 +41,23 @@ esRecurrente(Accion):-
   hizo(Mago, Accion),
   hizo(OtroMago, Accion),
   Mago \= OtroMago.
+
+% 2
+
+esDe(hermione, gryffindor).
+esDe(ron, gryffindor).
+esDe(harry, gryffindor).
+esDe(draco, slytherin).
+esDe(luna, ravenclaw).
+esDe(cedric, hufflepuff).
+
+puntajeTotalDeCasa(Casa, PuntajeTotal):-
+  esDe(_, Casa),
+  findall(Puntos,
+    (esDe(Mago, Casa), puntosQueObtuvo(Mago, _, Puntos)),
+    ListaPuntos),
+  sum_list(ListaPuntos, PuntajeTotal).
+
+puntosQueObtuvo(Mago, Accion, Puntos):-
+  hizo(Mago, Accion),
+  puntajeQueGenera(Accion, Puntos).
