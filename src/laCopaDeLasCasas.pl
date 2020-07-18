@@ -61,3 +61,14 @@ puntajeTotalDeCasa(Casa, PuntajeTotal):-
 puntosQueObtuvo(Mago, Accion, Puntos):-
   hizo(Mago, Accion),
   puntajeQueGenera(Accion, Puntos).
+
+% 3
+
+casaGanadora(Casa):-
+  puntajeTotalDeCasa(Casa, PuntajeMayor),
+  forall((puntajeTotalDeCasa(OtraCasa, PuntajeMenor), Casa \= OtraCasa),
+         PuntajeMayor > PuntajeMenor).
+
+casaGanadora2(Casa):-
+  puntajeTotalDeCasa(Casa, PuntajeMayor),
+  not((puntajeTotalDeCasa(_, OtroPuntaje), OtroPuntaje > PuntajeMayor)).
