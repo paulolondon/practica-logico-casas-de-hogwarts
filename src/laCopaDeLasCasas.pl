@@ -56,4 +56,4 @@ casaGanadora(Casa) :-
 
 buenAlumno(Alumno) :-
     accion(Alumno, _),
-    not(accion(Alumno,Accion),puntosAccion(Accion,Puntos), Puntos < 0).
+    not((accion(Mago, Accion), puntosAccion(Accion, Puntos), Puntos < 0)).
