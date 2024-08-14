@@ -54,6 +54,6 @@ casaGanadora(Casa) :-
     findall(Puntos-C, puntosCasa(C, Puntos), Puntuaciones),
     max_member(PuntosMax-Casa, Puntuaciones).
 
-buenAlumno(Mago) :-
-    accion(Mago, _),
-    not(accion(Mago,Accion),puntosAccion(Accion,Puntos), Puntos < 0)
+buenAlumno(Alumno) :-
+    accion(Alumno, _),
+    not(accion(Alumno,Accion),puntosAccion(Accion,Puntos), Puntos < 0)
