@@ -26,9 +26,9 @@ esDe(luna, ravenclaw).
 
 % Cálculo de puntos por acción
 puntosAccion(fueraDeCama, -50).
-puntosAccion(irA(Lugar), Puntos) :-
+puntosAccion(irA(Lugar), PuntosRestados) :-
     lugarProhibido(Lugar, PuntosNeg),
-    Puntos is -PuntosNeg.
+    PuntosRestados is PuntosNeg * -1.
 puntosAccion(irA(_), 0).
 puntosAccion(buenaAccion(_, Puntos), Puntos).
 
